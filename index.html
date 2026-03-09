@@ -596,6 +596,33 @@ Do not include any other text, explanation, or units.
                 </div>
               </div>
             </details>
+
+            <details class="inner-toggle">
+              <summary><strong>Example Input</strong></summary>
+              <div class="toggle-content">
+                <div class="prompt-scrollbox">
+                  <pre><code class="nohighlight"><span class="code-red">${human_description}</span> = A broad-shouldered middle-aged man, seated on a sofa in their living room</code></pre>
+                </div>
+              </div>
+            </details>
+
+            <details class="inner-toggle">
+              <summary><strong>Example First-stage Response</strong></summary>
+              <div class="toggle-content">
+                <div class="response-box">A middle-aged man of average height with noticeably broad shoulders and a large, heavy-set frame. He has a stocky build, featuring thick limbs and a solid mixture of dense muscle and moderate body fat.</div>
+              </div>
+            </details>
+
+            <details class="inner-toggle">
+              <summary><strong>Example Second-stage Response</strong></summary>
+              <div class="toggle-content">
+                <div class="response-box"><pre><code class="language-json">{
+  "beta_0": 1.18,
+  "beta_1": 1.42,
+  "gender": "male"
+}</code></pre></div>
+              </div>
+            </details>
           </div>
 
           <div class="prompt-panel" id="prompt-3">
@@ -686,6 +713,81 @@ Now you should respond with the SMPL-X body pose joint angles that matches the f
 ```
 </code></pre>
                 </div>
+              </div>
+            </details>
+
+            <details class="inner-toggle">
+              <summary><strong>Example Input</strong></summary>
+              <div class="toggle-content">
+                <div class="prompt-scrollbox">
+                  <pre><code class="nohighlight"><span class="code-red">${human_description}</span> = A broad-shouldered middle-aged man, seated on a sofa in their living room</code></pre>
+                </div>
+              </div>
+            </details>
+
+            <details class="inner-toggle">
+              <summary><strong>Example First-stage Response</strong></summary>
+              <div class="toggle-content">
+                <div class="response-box">The hips are comfortably flexed to accommodate the seated posture on the sofa, with both legs moderately abducted and externally rotated in a relaxed, open stance. The knees are bent to support this weight distribution; the right knee rests at a standard sitting angle to plant the foot firmly on the floor, while the left knee is angled slightly wider and more extended, pushing the left foot a bit further forward. 
+
+To present the itchy forearm to the robot, the left shoulder is slightly flexed forward and gently abducted, allowing the arm to drop naturally. The left elbow is bent at a relaxed, obtuse angle so that the forearm rests securely across the left thigh. The arm is slightly supinated to turn the inside of the forearm upward, providing a stable, unobstructed surface for the robot to scratch without limb interpenetration. 
+
+In contrast, the right shoulder is relaxed downward and subtly retracted, with the right elbow loosely bent to drape the arm casually over the sofa's armrest, keeping it completely out of the robot's workspace. 
+
+The neck is flexed slightly downward and rotated to the left, angling the head so the man can comfortably and attentively watch the robot relieve the itch on his arm.</div>
+              </div>
+            </details>
+
+            <details class="inner-toggle">
+              <summary><strong>Example Second-stage Response</strong></summary>
+              <div class="toggle-content">
+                <div class="response-box"><pre><code class="language-json">{
+  "left_hip": {
+    "x": -80.0,
+    "y": 15.0,
+    "z": 15.0
+  },
+  "right_hip": {
+    "x": -85.0,
+    "y": -15.0,
+    "z": -15.0
+  },
+  "left_knee": {
+    "x": 55.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "right_knee": {
+    "x": 85.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "neck": {
+    "x": 15.0,
+    "y": 0.0,
+    "z": 30.0
+  },
+  "left_shoulder": {
+    "x": 0.0,
+    "y": -30.0,
+    "z": -65.0
+  },
+  "right_shoulder": {
+    "x": 0.0,
+    "y": 15.0,
+    "z": 70.0
+  },
+  "left_elbow": {
+    "x": -20.0,
+    "y": -60.0,
+    "z": 0.0
+  },
+  "right_elbow": {
+    "x": 0.0,
+    "y": 80.0,
+    "z": 0.0
+  }
+}</code></pre></div>
               </div>
             </details>
 
